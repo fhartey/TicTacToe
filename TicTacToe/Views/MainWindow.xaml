@@ -1,0 +1,20 @@
+﻿<Window x:Class="TicTacToe.Views.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:prism="http://prismlibrary.com/"
+        prism:ViewModelLocator.AutoWireViewModel="True"
+        Height="600" Width="500">
+    <Grid >
+        <ContentControl prism:RegionManager.RegionName="ContentRegion" />
+        <Grid HorizontalAlignment="Left" Height="100" Margin="439,55,0,0" VerticalAlignment="Top" Width="100"/>
+        <DataGrid HorizontalAlignment="Left" Height="50" VerticalAlignment="Top" Width="492"/>
+        <Button  Command="{Binding NavigateCommand}" CommandParameter="ScoreBoardView" HorizontalAlignment="Left" Margin="123,20,0,0" VerticalAlignment="Top" Width="75">
+            <TextBlock TextWrapping="Wrap" Text="Check Scores"/>
+        </Button>
+        <Button  Command="{Binding NavigateCommand}" CommandParameter="MainBoardView" HorizontalAlignment="Left" Margin="10,20,0,0" VerticalAlignment="Top" Width="75">
+            <TextBlock TextWrapping="Wrap" Text="Play Game"/>
+        </Button>
+
+
+    </Grid>
+</Window>

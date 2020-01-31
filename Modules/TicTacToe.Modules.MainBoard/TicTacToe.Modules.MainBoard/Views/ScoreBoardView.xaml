@@ -1,0 +1,20 @@
+﻿<UserControl x:Class="TicTacToe.Modules.MainBoard.Views.ScoreBoardView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:prism="http://prismlibrary.com/"
+             xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity"
+             prism:ViewModelLocator.AutoWireViewModel="True">
+    <Grid  x:Name="LayoutRoot" Background="White" Height="600" Width="500">
+        <ListBox ItemsSource="{Binding Scores}" HorizontalAlignment="Left" Height="243" Margin="0,134,0,0" VerticalAlignment="Top" Width="500" FontWeight="Bold">
+        </ListBox>
+            <TextBlock HorizontalAlignment="Left" Margin="0,88,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="490" Height="46" FontSize="20" FontWeight="Bold">
+            <TextBlock.Text>
+                <MultiBinding StringFormat="{}Total Wins: {0} Losses: {1} Draws:  {2}">
+                    <Binding Path="Wins" />
+                    <Binding Path="Losses" />
+                    <Binding Path="Draws" />
+                </MultiBinding>
+            </TextBlock.Text>
+        </TextBlock>
+    </Grid>
+</UserControl>
